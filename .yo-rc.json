@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Emir Herrera",
+      "authorEmail": "emir.herrera@gmail.com",
+      "authorUrl": ""
+    }
+  }
+}
