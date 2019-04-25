@@ -67,7 +67,6 @@
     ]
   },
   "scripts": {
-    "pretest": "eslint .",
     "test": "jest"
   },
   "repository": "git@bitbucket.org:galvintec/mga-krack.git",
