@@ -9,8 +9,8 @@ module.exports = class extends Generator {
     // This makes `appname` a required argument.
     this.argument("model", { type: String, required: true });
 
-    this.options.modelInstance = this.options.model.toLowerCase();
-    this.options.model = this.options.modelInstance.charAt(0).toUpperCase() + this.options.modelInstance.slice(1);
+    this.options.modelInstance = this.options.model.charAt(0).toLowerCase() + this.options.model.slice(1);//this.options.model.toLowerCase();
+    this.options.model = this.options.model.charAt(0).toUpperCase() + this.options.model.slice(1);
 
     this.options.modelsInstance = this.options.modelInstance.replace(/y$/, 'ie') +'s';
     this.options.models = this.options.model.replace(/y$/, 'ie') + 's';
