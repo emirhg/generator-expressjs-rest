@@ -11,6 +11,6 @@ export default class Create<%= options.model %>Handler {
 
   public async  handle(command : Create<%= options.model %>Command) {
     const <%= options.modelInstance %> = new <%= options.model %>(command);
-    return await this.modelServices.store(<%= options.modelInstance %>);
+    return await this.<%= options.modelInstance %>Services.store(<%= options.modelInstance %>);
   }
 }

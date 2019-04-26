@@ -10,7 +10,7 @@ export default class Update<%= options.model %>Handler {
   }
 
   public async  handle(command : Update<%= options.model %>Command) {
-    const model = new Model(command);
-    return await this.modelServices.update(model);
+    const <%= options.modelInstance %> = new <%= options.model %>(command);
+    return await this.<%= options.modelInstance %>Services.update(<%= options.modelInstance %>);
   }
 }
