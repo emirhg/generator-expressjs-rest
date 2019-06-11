@@ -20,3 +20,18 @@ export const Update<%= options.model %>Schema = {
       return customErrorMessages.default(errors);
     }),
 };
+
+export const Upsert<%= options.model %>Schema = {
+  id: Joi.number()
+    .min(0)
+    .required()
+    .error((errors) => {
+      return customErrorMessages.default(errors);
+    }),
+  reference: Joi.string()
+    .min(0)
+    .required()
+    .error((errors) => {
+      return customErrorMessages.default(errors);
+    }),
+};

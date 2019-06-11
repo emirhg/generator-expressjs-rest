@@ -13,14 +13,22 @@ export default class <%= options.model %> extends BaseEntity {
   private id: number;
 
   @Column()
-  name: string;
+  reference: string;
 
-  getName(): string {
-    return this.name;
+  getReference(): string {
+    return this.reference;
   }
 
-  setName(name: string): void {
-    this.name = name;
+  setReference(reference: string): void {
+    this.reference = reference;
+  }
+
+  setId(id: number){
+    this.id = id;
+  }
+
+  getId() : number{
+    return this.id;
   }
 
 }

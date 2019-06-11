@@ -18,6 +18,11 @@ export default class <%= options.model %>Services {
     return await this.<%= options.modelInstance %>Repository.find();
   }
 
+  public async findOne(conditions) {
+    this.<%= options.modelInstance %>Repository = getRepository(<%= options.model %>);
+    return await this.<%= options.modelInstance %>Repository.findOne(conditions);
+  }
+
   public async getById(id: number) {
     this.<%= options.modelInstance %>Repository = getRepository(<%= options.model %>);
     const <%= options.modelInstance %> = await this.<%= options.modelInstance %>Repository.find( { where : { id } } );

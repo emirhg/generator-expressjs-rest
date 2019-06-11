@@ -1,6 +1,6 @@
 {
   "name": "generator-expressjs-rest",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "homepage": "",
   "author": {
@@ -13,7 +13,8 @@
   ],
   "main": "generators/index.js",
   "keywords": [
-    "",
+    "expressjs",
+    "typeorm",
     "yeoman-generator"
   ],
   "devDependencies": {
@@ -69,6 +70,6 @@
   "scripts": {
     "test": "jest"
   },
-  "repository": "git@bitbucket.org:galvintec/mga-krack.git",
+  "repository": "https://github.com/emirhg/generator-expressjs-rest.git",
   "license": "GPL-3.0"
 }

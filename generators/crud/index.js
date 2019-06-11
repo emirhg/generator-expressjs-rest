@@ -21,7 +21,7 @@ module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(
-      yosay(`Welcome to the smashing ${chalk.red('generator-expressjs-rest')} generator!`)
+      yosay(`Welcome to the smashing ${chalk.red('generator-expressjs-rest')} generator! prerelease`)
     );
 
     // const prompts = [
@@ -129,6 +129,20 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       this.templatePath('src/API/Application/Handlers/UpdateHandler.ts'),
       this.destinationPath(`src/API/Application/Handlers/${this.options.models}/Update${this.options.model}Handler.ts`),
+      {props : this.props, options : this.options}
+    );
+
+    // Upsert command
+    this.fs.copyTpl(
+      this.templatePath('src/API/Application/Commands/UpsertCommand.ts'),
+      this.destinationPath(`src/API/Application/Commands/${this.options.models}/Upsert${this.options.model}Command.ts`),
+      {props : this.props, options : this.options}
+    );
+
+    // Upsert handler
+    this.fs.copyTpl(
+      this.templatePath('src/API/Application/Handlers/UpsertHandler.ts'),
+      this.destinationPath(`src/API/Application/Handlers/${this.options.models}/Upsert${this.options.model}Handler.ts`),
       {props : this.props, options : this.options}
     );
 

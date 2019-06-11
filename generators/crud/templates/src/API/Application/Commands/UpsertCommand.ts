@@ -1,7 +1,9 @@
+import Validator from '../../../Common/Validator';
 import { Command } from 'simple-command-bus';
+import RequiredFieldException from '../../Exceptions/RequiredFieldException'
 import * as _ from 'lodash';
 
-export default class Update<%= options.model %>Command extends Command {
+export default class Upsert<%= options.model %>Command extends Command {
   private id;
 
   constructor(body : Object) {
