@@ -3,7 +3,7 @@ import * as _ from 'lodash';
 
 export default class <%= options.command %>Command extends Command {
 
-  constructor(body: Object) {
+  constructor(body?: Object) {
     super();
     _.assign(this, body);
   }
